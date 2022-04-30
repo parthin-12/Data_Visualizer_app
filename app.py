@@ -21,31 +21,6 @@ cc1=1
 def Sort_Tuple(tup): 
     return(sorted(tup, key = lambda x: x[1],reverse=True))  
 
-# while 1:
-#     l='https://raw.githubusercontent.com/jaydparmar/Data_Analysis/main/shop'+str(cc1)+'.csv'    
-#     r=requests.head(l)
-#     print(r)
-#     if r.status_code != 200 :
-#         break
-#     shop=shop+'<a href="#" onclick="check('+str(cc1)+')">Shop '+str(cc1)+'</a>'
-#     df.insert(len(df),pd.read_csv(l,header=None))
-#     cc1=cc1+1
-# T=[]
-# a3=[]
-# t2=""
-# s6=set()
-# results=[]
-
-
-# for k in range(0,cc1-1):
-#     tt1=[]
-#     tt1.clear()
-#     for i in range(0,len(df[k])):
-#         tt1.append([ str(df[k].values[i,j])  for j in range(0,len(df[k].columns)) if str(df[k].values[i,j])!='nan'])
-#     rules=apriori(tt1,min_support=0.003,min_confidence =0.002,min_lift=1.1,min_length=2)
-#     results.insert(len(results),list(rules))
-#     print(len(df[k]))
-#     print(len(results[k]))
 
 t2=""
 a3=[]
@@ -170,7 +145,7 @@ def shopupdate():
 
 app=Flask(__name__)
 app.secret_key = "abc"
-app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///database.db"
+app.config['SQLALCHEMY_DATABASE_URI']="postgresql://cliuejjfiqfkcw:5d913b97490430bfc1679b6765d18780be0eb8e5aa7706a37624bbd5603cf805@ec2-52-5-110-35.compute-1.amazonaws.com:5432/d2u8oi5lhtdbc6"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=false
 db=SQLAlchemy(app)
 
