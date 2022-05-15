@@ -95,7 +95,26 @@
             color: #ffe221;
             animation-delay: 4s;
         }
+        ::-webkit-scrollbar-track
+        {
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+            background-color: #F5F5F5;
+            border-radius: 10px;
+        }
 
+        ::-webkit-scrollbar
+        {
+            width: 6px;
+            border-radius: 13px;
+            background-color: #F5F5F5;
+        }
+
+        ::-webkit-scrollbar-thumb
+        {
+            border-radius: 10px;
+            background-color: #FFF;
+            background: #004d40;
+        }
         @keyframes titleAnimation {
             0% {
                 transform: translateY(-50px);
