@@ -234,7 +234,7 @@ def shopupdate():
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///database.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://rvjnsyfvybofmh:5bf8d8c05de66131f7421289a4d92647d25b02fb0c191107eb4a74bf62d5e239@ec2-3-224-164-189.compute-1.amazonaws.com:5432/d8fg9v8s24jtk4"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = false
 app.secret_key = "abc"
 db = SQLAlchemy(app)
